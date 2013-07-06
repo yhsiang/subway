@@ -37,6 +37,9 @@ Installation
 
 4. Point your browser at `http://localhost:3000/`
 
+5. Add user by script
+				
+				$ node ./lib/adduser.js
 
 Development
 -----------
