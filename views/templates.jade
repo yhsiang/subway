@@ -114,7 +114,10 @@ script(id="overview_login", type="text/html")
     .control-group
       label(for="login-password") Password
       input#login-password(type="password")
+    .control-group
     a(id="login-button", class="btn btn-primary", type="submit") Login
+    .control-group
+    a(id="github-auth", class="btn btn-primary", type="button", onclick="auth.login('github');") github login
 
 script(id="overview_register", type="text/html")
   #home_parent
@@ -162,6 +165,8 @@ script(id="user_box", type="text/html")
   div.user_box_element
     i(class="icon-user icon-white spacing-right")
     {{nick}}
+  div.user_box_element
+    a(id="logout", class="btn", onclick="auth.logout();irc.socket.emit('logout');") Logout
   div.user_box_element
     .close-button ×
     i(class="icon-asterisk icon-white spacing-right")

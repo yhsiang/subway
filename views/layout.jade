@@ -7,11 +7,14 @@ html
     != css('subway')
     != css('subway-mobile')
 
+    script(src='https://cdn.firebase.com/v0/firebase.js')
+    script(src='https://cdn.firebase.com/v0/firebase-simple-login.js')
     script
       var ENV = '#{env}',
           PORT = #{port};
     script(src='/socket.io/socket.io.js')
     != js('client')
+    != js('firebase')
     include templates
   body
     block content
